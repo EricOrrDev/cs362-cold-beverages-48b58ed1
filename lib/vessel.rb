@@ -15,4 +15,11 @@ class Vessel
     @current_volume = volume
   end
 
+  def fill_partially(volume)
+    @current_volume += volume
+    if @current_volume > volume
+      @current_volume = volume
+    end
+  end
+
 end
